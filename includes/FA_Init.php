@@ -18,10 +18,11 @@ final class FA_Init
     private static function init(): array
     {
        return [
-           //Utils
-        //    FA_Invoice::class,
+           FA_Invoice::class,
         //    FA_Templates::class,
         //    FA_RegisterAjax::class,
+
+        //Utils
        ];
     }
 
