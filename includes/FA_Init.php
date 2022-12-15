@@ -4,6 +4,7 @@ namespace App\FoodApp;
 use App\FoodApp\CPT\FA_Invoice;
 use App\FoodApp\Templates\FA_Templates;
 use App\FoodApp\Ajax\FA_RegisterAjax;
+use App\FoodApp\Utils\FA_Enqueue;
 
 if (!defined('ABSPATH')) {
     die;
@@ -21,8 +22,7 @@ final class FA_Init
            FA_Invoice::class,
            FA_Templates::class,
            FA_RegisterAjax::class,
-
-        //Utils
+           FA_Enqueue::class,
        ];
     }
 
