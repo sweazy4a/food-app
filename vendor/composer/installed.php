@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'app/food-app',
-        'pretty_version' => 'dev-main',
-        'version' => 'dev-main',
-        'reference' => '482d502e22d8d2c2c4067b0917bd21878776077d',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'e173746f3f6b9af5065699c0987cc9016e5533bf',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'app/food-app' => array(
-            'pretty_version' => 'dev-main',
-            'version' => 'dev-main',
-            'reference' => '482d502e22d8d2c2c4067b0917bd21878776077d',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'e173746f3f6b9af5065699c0987cc9016e5533bf',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

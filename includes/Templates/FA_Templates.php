@@ -32,11 +32,8 @@ class FA_Templates {
 
 	}
 
-	/**
-	 * Initializes the plugin by setting filters and administration functions.
-	 */
     public function __construct(){
-
+        
 		$this->templates = array();
 
 
@@ -84,7 +81,6 @@ class FA_Templates {
 		$posts_templates = array_merge( $posts_templates, $this->templates );
 		return $posts_templates;
 	}
-
 
 	public function register_project_templates( $atts ) {
 
