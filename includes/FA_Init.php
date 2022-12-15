@@ -1,8 +1,8 @@
 <?php
 
 namespace App\FoodApp;
-// use App\FoodApp\CPT\FA_Invoice;
-// use App\FoodApp\Templates\FA_Templates;
+use App\FoodApp\CPT\FA_Invoice;
+use App\FoodApp\Templates\FA_Templates;
 // use App\FoodApp\Ajax\FA_RegisterAjax;
 
 if (!defined('ABSPATH')) {
@@ -19,7 +19,7 @@ final class FA_Init
     {
        return [
            FA_Invoice::class,
-        //    FA_Templates::class,
+           FA_Templates::class,
         //    FA_RegisterAjax::class,
 
         //Utils
