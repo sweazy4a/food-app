@@ -1,0 +1,81 @@
+@import "../setup.scss";
+
+.invoice-row{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    &--menu{
+        width:27%;
+        ul{
+            display:flex;
+            justify-content: space-between;
+            cursor:pointer;
+            list-style-type: none;
+            padding:0px;
+
+            li{
+                padding:4px;
+                text-transform: uppercase;
+                font-size:12px;
+                font-weight:700;
+                color:$active;
+            }
+        }
+    }
+
+    &--nav{
+        width:60%;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        .datefilter{
+            width:40%;
+            display:flex;
+            input{
+                width:100px;
+                height:25px;
+                border:1px solid $grey-lt;
+                font-size:15px;
+            }
+            .arrow-1{
+                position: absolute;
+                left: 49%;
+            }
+            #min{
+                border-right:none;
+            }
+            #max{
+                border-left:none;
+                margin-left: -2px;
+            }
+        }
+
+        .searchbox{
+            display:flex;
+            align-items: center;
+            width:65%;
+            justify-content: space-between;
+            input{
+                height:25px;
+                border:1px solid $grey-lt;
+                width:55%;
+                display:flex;
+            }
+        #btn_status{
+            background:$action-md;
+            color:#ffff;
+            width:37%;
+            font-size:16px;
+            font-weight:500;
+            display:flex;
+            padding:5px;
+            justify-content: center;
+            border-radius:6px;
+            border:none!important;
+            outline:none!important;
+        }
+ 
+
+    }
+    }
+}

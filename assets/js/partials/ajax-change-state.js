@@ -2,7 +2,7 @@
 $(document).ready(function() {
     $('#btn_status').on('click', function(e) {
     
-        $('#irow:checked').each(function (page) {
+        $('input[type="checkbox"]').each(function (page) {
             let ids = [];
             $this = $(this);
             let verified = 'VERIFIED';
@@ -12,7 +12,7 @@ $(document).ready(function() {
     
             if(status_value !== verified){
                 
-                $this.parent().siblings('td').eq(2).text(verified);
+                $this.parent().siblings('td').eq(2).html('<div class="status-VERIFIED">' + verified + '</div>');
                 $.ajax({
                 url: invoice.ajaxUrl,
                 type: "POST",

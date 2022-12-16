@@ -1,0 +1,8 @@
+.invoice_load {
+    padding: 20px;
+    .invoice-universal-pagination ul {margin: 0; padding: 0;}
+    .invoice-universal-pagination ul li {display: inline; margin: 3px; padding: 4px 8px; background: #FFF; color: black; }
+    .invoice-universal-pagination ul li.active:hover {cursor: pointer; background: #1E8CBE; color: white; }
+    .invoice-universal-pagination ul li.inactive {background: #7E7E7E;}
+    .invoice-universal-pagination ul li.selected {background: #1E8CBE; color: white;}
+}

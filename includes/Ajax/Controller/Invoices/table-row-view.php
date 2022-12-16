@@ -17,11 +17,14 @@ $display_end_date = date('d/m/Y', strtotime($display_end_date));
 ?>
 
          <?php if($invoice_rest !== 'Untitled') { ?>
+
          <tr data-id="<?php echo $post->ID; ?>">
-            <td><input id="irow" type="checkbox" id="scales" name="scales"></td>
+            <td>
+            <input type="checkbox" id="irow-<?php echo $invoice_id; ?>" class="regular-checkbox big-checkbox" />
+            <label for="irow-<?php echo $invoice_id; ?>"></label>
             <td><?php echo $invoice_id; ?></td>
             <td><?php echo $invoice_rest; ?></td>
-            <td class="status"><?php echo $invoice_status; ?></td>
+            <td class="status"><div class="status-<?php echo $invoice_status; ?>"><?php echo $invoice_status; ?></div></td>
             <td><?php echo $display_start_date; ?></td>
             <td><?php echo $display_end_date; ?></td>
             <td><?php echo $invoice_total; ?></td>
@@ -32,3 +35,5 @@ $display_end_date = date('d/m/Y', strtotime($display_end_date));
             <td data-filter="<?php echo $invoice_start_date; ?>"></td>
          </tr> 
      <?php } ?>
+
+
