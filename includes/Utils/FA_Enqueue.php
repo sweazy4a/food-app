@@ -19,8 +19,8 @@ class FA_Enqueue
 
     public function enqueueScripts()
     {
-        wp_enqueue_script('jquery-min', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js');
-        wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.5.1.js');
+        wp_enqueue_script('jquery-min-2', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js');
+        wp_enqueue_script('jquery-data', 'https://code.jquery.com/jquery-3.5.1.js');
         wp_enqueue_script( 'invoice-ajax', FA_URL . '/dist/js/main.js', [], '1.0', );
 
         /* Localize ajax */
