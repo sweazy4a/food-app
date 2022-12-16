@@ -9,7 +9,6 @@ $(document).ready(function() {
 				// console.log('DATA', data);
 				var date = new Date(data[11]);
 
-				console.log('DATE', date);
 				if (
 					(min === null && max === null) ||
 					(min === null && date <= max) ||
