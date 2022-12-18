@@ -82,7 +82,6 @@ public function loadInvoices() {
                 <th><?php echo __('Orders', 'food-app');?></th>
                 <th></th>
                 <th></th>
-                <th></th>
             </tr>
         </thead>
         <tbody class ="invoice-pagination-content">

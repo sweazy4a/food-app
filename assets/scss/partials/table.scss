@@ -13,8 +13,6 @@
 .page-template-page-template-invoices {
   background: $bg-main;
 
-
-
   .invoice {
     width: 1100px;
     padding:25px 30px;
@@ -22,22 +20,27 @@
     flex-direction: column;
     margin: 0 auto;
     background:$bg-main;
-
+    overflow:hidden;
+    padding-top: 140px;
+    
     @include respond-below(md) {
       width:100%;
+      padding-top:80px;
     }
 
     
   #table_wrapper{
-    @include respond-below(md) {
-      overflow: hidden;
-      overflow-x: scroll;
-      -webkit-overflow-scrolling: touch;
-  }
+      @include respond-below(md) {
+        overflow: hidden;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
   }
 
     h2{
       margin-bottom:40px;
+      font-size: 30px;
+      font-weight: 500;
     }
 
     .invoice_load {
@@ -50,11 +53,11 @@
         width: 100%;
       }
 
-      // &--content{
       #table {
         border: 1px solid $grey-lt;
         border-radius: 4px 4px 0px 0px;
         border-bottom:0px;
+        width:100%!important;
         @include respond-below(sm) {
           overflow-x:auto!important;
         }
@@ -143,9 +146,6 @@
           padding: 12px 7px;
         }
         tbody {
-          // @include respond-below(md) {
-          // overflow-y: scroll;
-          // }
           tr {
             background: $white;
             box-shadow: 0;

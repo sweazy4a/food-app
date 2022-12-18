@@ -406,10 +406,13 @@ body #main input:focus {
   flex-direction: column;
   margin: 0 auto;
   background: #f7f8fa;
+  overflow: hidden;
+  padding-top: 140px;
 }
 @media (max-width: 1100px) {
   .page-template-page-template-invoices .invoice {
     width: 100%;
+    padding-top: 80px;
   }
 }
 @media (max-width: 1100px) {
@@ -421,6 +424,8 @@ body #main input:focus {
 }
 .page-template-page-template-invoices .invoice h2 {
   margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: 500;
 }
 .page-template-page-template-invoices .invoice .invoice_load {
   padding: 0px;
@@ -438,6 +443,7 @@ body #main input:focus {
   border: 1px solid #c2bfbf;
   border-radius: 4px 4px 0px 0px;
   border-bottom: 0px;
+  width: 100% !important;
 }
 @media (max-width: 800px) {
   .page-template-page-template-invoices .invoice .invoice_load #table {
@@ -724,6 +730,11 @@ body #main input:focus {
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu .login-user {
+  font-style: italic;
+  color: #f1f1f1;
+  font-weight: 300;
 }
 #menu ul {
   list-style-type: none;
