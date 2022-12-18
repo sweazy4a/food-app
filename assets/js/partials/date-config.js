@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
 	function initDateConfig() {
 		setTimeout(function() {
 			var minDate, maxDate;
@@ -92,12 +91,8 @@ $(document).ready(function() {
 				$('.invoice-row--menu ul li').removeClass('active-item');
 				$(this).addClass('active-item');
 			})
-
-
-
-
-			$(document).ready(function() {
-				$("#parent").click(function() {
+	
+			$("#parent").click(function() {
 					$(".child").prop("checked", this.checked);
 				});
 
@@ -108,13 +103,11 @@ $(document).ready(function() {
 						$('#parent').prop('checked', false);
 					}
 				});
-			});
-		}, 2000);
-
-
+	
+		}, 1400);
 	}
-	initDateConfig();
 
+	initDateConfig();
 
 	$("body").delegate(".invoice_container .invoice-universal-pagination li.active", "click", function() {
 		initDateConfig();

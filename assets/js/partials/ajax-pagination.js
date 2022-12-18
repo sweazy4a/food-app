@@ -20,7 +20,7 @@ $(document).ready(function() {
     invoice_load_all_posts(1);
 
     $("body").delegate(".invoice_container .invoice-universal-pagination li.active", "click", function(){
-   var page = $(this).attr('p');
+        var page = $(this).attr('p');
         invoice_load_all_posts(page);
     });
 

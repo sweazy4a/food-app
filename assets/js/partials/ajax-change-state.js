@@ -22,7 +22,6 @@ $(document).ready(function() {
 						action: "ChangeStatus",
 					},
 					error: function(error) {
-						// new AWN().alert().", options);
 					},
 					success: function(response) {
 						console.log(response);
