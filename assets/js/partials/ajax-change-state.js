@@ -1,6 +1,5 @@
 $(document).ready(function() {
 	$('#btn_status').on('click', function(e) {
-
 		$('input[type="checkbox"]:checked').each(function(page) {
 			let ids = [];
 			$this = $(this);
@@ -22,14 +21,13 @@ $(document).ready(function() {
 						action: "ChangeStatus",
 					},
 					error: function(error) {
+						//
 					},
 					success: function(response) {
-						console.log(response);
-
+						//
 					},
 				});
 			}
-
 		});
 	});
 });
