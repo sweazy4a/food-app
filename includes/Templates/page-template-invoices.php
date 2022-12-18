@@ -33,11 +33,15 @@ include('header-invoices.php');
          </div>
       </div>
    </div>
+  
 
    <div class = "invoice_load">
       <div class="invoice_load--container invoice_container">
          <div class="invoice_load--content invoice_content">
        </div>
+      </div>
+      <div class="spinner-bg">
+         <div class="spinner"></div>
       </div>
    </div>
 

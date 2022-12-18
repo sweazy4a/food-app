@@ -1,5 +1,10 @@
 $(document).ready(function() {
 	function initDateConfig() {
+			
+		$('.invoice-row').addClass('whileLoad');
+		$('.invoice_load').addClass('whileLoad')
+		$('.spinner-bg').show();
+
 		setTimeout(function() {
 			var minDate, maxDate;
 
@@ -103,8 +108,17 @@ $(document).ready(function() {
 						$('#parent').prop('checked', false);
 					}
 				});
-	
-		}, 1400);
+			
+		}, 1000);
+
+		setTimeout(function() {
+			$('.spinner-bg').hide();
+		}, 1070);
+
+		setTimeout(function() {
+			$('.invoice_load').removeClass('whileLoad');
+			$('.invoice-row').removeClass('whileLoad');
+		}, 1090);
 	}
 
 	initDateConfig();

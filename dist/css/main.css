@@ -756,3 +756,52 @@ body #main input:focus {
   transform: scale(0.6) !important;
   transition: all 0.4s ease-in-out !important;
 }
+
+.whileLoad {
+  opacity: 0.3;
+}
+
+.spinner {
+  width: 102px;
+  height: 102px;
+  display: grid;
+  animation: spinner-plncf9 2.4s infinite;
+  margin-bottom: 100px;
+}
+
+.spinner::before,
+.spinner::after {
+  content: "";
+  grid-area: 1/1;
+  border: 11.5px solid;
+  border-radius: 50%;
+  border-color: #ff9501 #ff9501 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+  mix-blend-mode: darken;
+  animation: spinner-plncf9 0.3s infinite linear;
+}
+
+.spinner::after {
+  border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #dbdcef #dbdcef;
+  animation-direction: reverse;
+}
+
+.spinner-bg {
+  z-index: 9999 !important;
+  background: transparent;
+  margin-top: 3px;
+  position: absolute;
+  width: 100%;
+  top: 30%;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.6;
+  z-index: 999;
+}
+
+@keyframes spinner-plncf9 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
