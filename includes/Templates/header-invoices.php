@@ -8,7 +8,7 @@
 <?php 
     wp_nav_menu( 
         array( 
-            'theme_location' => 'my-custom-menu'
+            'theme_location' => 'food-app-addon'
         ) 
     ); 
 ?>
@@ -25,7 +25,7 @@
         }
         else { 
             ?>
-            <a class="login-user" href="<?php echo admin_url();?>">Login</a>
+            <a class="login-user" href="<?php echo admin_url();?>"><?php echo __('Login', 'food-app');?></a>
             <?php
         } ?>
 </div>
@@ -42,7 +42,7 @@
          <?php 
          wp_nav_menu( 
             array( 
-                  'theme_location' => 'my-custom-menu'
+                  'theme_location' => 'food-app-addon'
             ) 
          ); 
       ?>

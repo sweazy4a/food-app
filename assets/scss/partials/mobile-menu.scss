@@ -17,16 +17,15 @@
       display: block;
       position: relative;
       z-index: 1;
-    
+
       -webkit-user-select: none;
       user-select: none;
 
-      a{
-        
-            text-decoration: none;
-            color: $white;
-          
-            transition: color 0.3s ease;
+      a {
+        text-decoration: none;
+        color: $white;
+
+        transition: color 0.3s ease;
       }
 
       input {
@@ -36,12 +35,12 @@
         position: absolute;
         top: -7px;
         left: -5px;
-      
+
         cursor: pointer;
-      
+
         opacity: 0; /* hide this */
         z-index: 2; /* and place it over the hamburger */
-      
+
         -webkit-touch-callout: none;
       }
 
@@ -128,15 +127,15 @@
         color: $white;
       }
     }
-    .current-menu-item{
-        border-bottom:2px solid $white;
-        border-radius:4px;
+    .current-menu-item {
+      border-bottom: 2px solid $white;
+      border-radius: 4px;
     }
   }
 }
 
 /* Onshrink */
-.smaller{
-    transform:scale(0.6)!important;
-    transition:all 0.4s ease-in-out!important;
+.smaller {
+  transform: scale(0.6) !important;
+  transition: all 0.4s ease-in-out !important;
 }

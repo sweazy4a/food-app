@@ -1,189 +1,185 @@
 @import "../setup.scss";
 
+.invoice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include respond-below(sm) {
+    flex-direction: column;
+  }
+  &--menu {
+    width: 27%;
+    @include respond-below(sm) {
+      width: 100%;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      list-style-type: none;
+      padding: 0px;
+      @include respond-below(sm) {
+        flex-wrap: wrap;
+      }
+      li {
+        padding: 4px 8px;
+        text-transform: uppercase;
+        font-size: 10.5px;
+        font-weight: 700;
+        color: $active;
+        box-shadow: none;
+        &:hover {
+          background: $action-md;
+          transition: all 0.3s ease-in-out;
+          border-radius: 6px;
+          color: $white;
+        }
 
-.invoice-row{
-    display:flex;
-    justify-content:space-between;
+        @include respond-below(sm) {
+          font-size: 15px;
+        }
+      }
+      .active-item {
+        background-color: $active;
+        color: $white;
+        border-radius: 6px;
+        &:hover {
+          border: none;
+          background-color: $active;
+        }
+      }
+    }
+  }
+
+  &--nav {
+    width: 60%;
+    display: flex;
     align-items: center;
-    @include respond-below(sm){
-        flex-direction: column;
+    justify-content: space-between;
+    @include respond-below(md) {
+      width: 70%;
     }
-    &--menu{
-        width:27%;
-        @include respond-below(sm){
-            width: 100%;
-            margin: 0 auto;
-            margin-bottom: 20px;
-        }
-        ul{
-            display:flex;
-            justify-content: space-between;
-            cursor:pointer;
-            list-style-type: none;
-            padding:0px;
-            @include respond-below(sm){
-               flex-wrap:wrap;
-            }
-            li{
-                padding: 4px 8px;
-                text-transform: uppercase;
-                font-size:10.5px;
-                font-weight:700;
-                color:$active;
-                box-shadow:none;
-                &:hover{
-                    background:$action-md;
-                    transition:all 0.3s ease-in-out;
-                    border-radius:6px;
-                    color:$white;
-                }
-
-                @include respond-below(sm){
-                    font-size:15px;
-                }
-            }
-            .active-item{
-                background-color:$active;
-                color:$white;
-                border-radius:6px;
-                &:hover{
-                    border:none;
-                    background-color:$active;
-                }
-            }
-        }
+    @include respond-below(sm) {
+      flex-direction: column;
+      width: 100%;
     }
-
-    &--nav{
-        width:60%;
-        display:flex;
+    .datefilter {
+      width: 40%;
+      display: flex;
+      background: $bg-lt;
+      position: relative;
+      @include respond-below(sm) {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      .datepicker-txt {
+        border: 1px solid $grey-lt;
+        font-size: 11.2px;
+        display: flex;
         align-items: center;
-        justify-content: space-between;
-        @include respond-below(md) {
-            width:70%;
+        padding: 4px 10px;
+        height: 30px;
+        margin-right: -4px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        img {
+          width: 13.2px;
+          height: auto;
+          margin-right: 5px;
+        }
+      }
+      .datepicker-row {
+        position: relative;
+        display: flex;
+        input {
+          width: 100px;
+          height: 30px;
+          border: 1px solid $grey-lt;
+          font-size: 12px;
+          text-align: center;
+          @include respond-below(sm) {
+            width: 70%;
+          }
+        }
+
+        .arrow-1 {
+          position: absolute;
+          top: 50%; /* position the top  edge of the element at the middle of the parent */
+          left: 50%; /* position the left edge of the element at the middle of the parent */
+          transform: translate(-50%, -50%);
+        }
+        #min {
+          border-right: none;
+        }
+        #max {
+          border-left: none;
+          margin-left: -2px;
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+        }
+      }
+    }
+
+    .searchbox {
+      display: flex;
+      align-items: center;
+      width: 52%;
+      justify-content: space-between;
+      position: relative;
+      @include respond-below(sm) {
+        flex-direction: column;
+        width: 100%;
+      }
+      img {
+        position: absolute;
+        left: 12px;
+        width: 14px;
+        height: auto;
+        opacity: 0.5;
+        @include respond-below(sm) {
+          top: 7px;
+        }
+      }
+      input {
+        height: 30px;
+        border: 1px solid $grey-lt;
+        width: 60%;
+        display: flex;
+        font-size: 11.2px;
+        padding-left: 30px;
+        border-radius: 4px;
+        @include respond-below(sm) {
+          width: 100%;
+        }
+      }
+      #btn_status {
+        background: $action-md;
+        color: #ffff;
+        width: 35%;
+        font-size: 14px;
+        font-weight: 500;
+        display: flex;
+        padding: 5px;
+        justify-content: center;
+        border-radius: 6px;
+        border: none !important;
+        outline: none !important;
+        box-shadow: 0;
+        &:hover {
+          transform: scale(0.99);
+          transition: all 0.3s ease-in-out;
+          -webkit-box-shadow: 0px 2px 16px 1px rgba(199, 199, 199, 1);
+          -moz-box-shadow: 0px 2px 16px 1px rgba(199, 199, 199, 1);
+          box-shadow: 0px 2px 16px 1px rgba(199, 199, 199, 1);
         }
         @include respond-below(sm) {
-           flex-direction: column;
-           width:100%;
+          margin-top: 15px;
         }
-        .datefilter{
-            width:40%;
-            display:flex;
-            background:$bg-lt;
-            position:relative;
-            @include respond-below(sm) {
-                width:100%;
-                justify-content: center;
-                margin-top:10px;
-                margin-bottom:10px;
-             }
-            .datepicker-txt{
-                border: 1px solid $grey-lt;
-                font-size: 11.2px;
-                display: flex;
-                align-items: center;
-                padding: 4px 10px;
-                height:30px;
-                margin-right: -4px;
-                border-top-left-radius: 4px;
-                border-bottom-left-radius: 4px;
-                img{
-                    width:13.2px;
-                    height:auto;
-                    margin-right:5px;
-                }
-            }
-            .datepicker-row{
-                position:relative;
-                display:flex;
-                input{
-                    width:100px;
-                    height:30px;
-                    border:1px solid $grey-lt;
-                    font-size:12px;
-                    text-align: center;
-                    @include respond-below(sm) {
-                        width:70%;
-                     }
-                }
-          
-            .arrow-1{
-                position: absolute;
-                top: 50%;  /* position the top  edge of the element at the middle of the parent */
-                left: 50%; /* position the left edge of the element at the middle of the parent */
-                transform: translate(-50%, -50%);
-            }
-            #min{
-                border-right:none;
-            }
-            #max{
-                border-left:none;
-                margin-left: -2px;
-                border-top-right-radius: 4px;
-                border-bottom-right-radius: 4px;
-            }
-            }
-        }
-
-        .searchbox{
-            display: flex;
-            align-items: center;
-            width: 52%;
-            justify-content: space-between;
-            position:relative;
-            @include respond-below(sm) {
-                flex-direction: column;
-                width:100%;
-           
-             }
-            img{
-                position:absolute;
-                left:12px;
-                width:14px;
-                height:auto;
-                opacity:0.5;
-            @include respond-below(sm){
-                top: 7px;
-            }
-            }
-            input{
-                height:30px;
-                border:1px solid $grey-lt;
-                width:60%;
-                display:flex;
-                font-size:11.2px;
-                padding-left:30px;
-                border-radius:4px;
-                @include respond-below(sm) {
-                    width:100%;
-                 }
-            }
-        #btn_status{
-            background:$action-md;
-            color:#ffff;
-            width: 35%;
-            font-size: 14px;
-            font-weight:500;
-            display:flex;
-            padding:5px;
-            justify-content: center;
-            border-radius:6px;
-            border:none!important;
-            outline:none!important;
-            box-shadow:0;
-            &:hover{
-                transform:scale(0.99);
-                transition:all 0.3s ease-in-out;
-                -webkit-box-shadow: 0px 2px 16px 1px rgba(199,199,199,1);
-                -moz-box-shadow: 0px 2px 16px 1px rgba(199,199,199,1);
-                box-shadow: 0px 2px 16px 1px rgba(199,199,199,1);
-            }
-            @include respond-below(sm){
-                margin-top:15px;
-            }
-        }
- 
-
+      }
     }
-    }
+  }
 }

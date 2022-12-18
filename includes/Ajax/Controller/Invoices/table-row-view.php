@@ -35,7 +35,7 @@ $currency = 'HK$';
             <td><?php echo $invoice_orders; ?></td>
             <td><a class="download-img" href="<?php echo $invoice_file;?>" download><img alt="download" src="<?php echo FA_URL . 'dist/img/cloud-download.svg' ?>"/></a></td>
             <td data-filter="<?php echo $invoice_start_date; ?>"></td>
-            <td>ALL</td>
+            <td><?php echo __('ALL', 'food-app');?></td>
          </tr> 
      <?php } ?>
 

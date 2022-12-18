@@ -1,33 +1,33 @@
 @import "../setup.scss";
 
 div.dt-datetime {
-    .dt-datetime-title{
-    button{
-        background:transparent!important;
+  .dt-datetime-title {
+    button {
+      background: transparent !important;
     }
+  }
+  div.dt-datetime-label {
+    font-size: 14px !important;
+    padding: 0px !important;
+    &:hover {
+      background: transparent !important;
     }
-    div.dt-datetime-label{
-        font-size:14px!important;
-        padding:0px!important;
-        &:hover{
-            background:transparent!important;
-        }
+  }
+  table {
+    button {
+      span {
+        font-size: 11px;
+      }
+      &:hover {
+        background: $action-md !important;
+      }
     }
-    table{
-        button{
-            span{
-                font-size:11px;
-            }
-            &:hover{
-                background:$action-md!important;
-            }
-        }
-    }
- table th{
-    font-size: 11px!important;
-    font-weight: 600!important;
- }
-table td.selectable.selected button{
-    background:$action-md!important;
-}
+  }
+  table th {
+    font-size: 11px !important;
+    font-weight: 600 !important;
+  }
+  table td.selectable.selected button {
+    background: $action-md !important;
+  }
 }

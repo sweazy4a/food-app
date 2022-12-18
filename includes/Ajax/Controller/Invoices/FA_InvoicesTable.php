@@ -64,22 +64,22 @@ public function loadInvoices() {
         }
         ?>
 
-    <table id="table" class="display nowrap" style="width:100%">
+    <table id="table" class="display nowrap">
         <thead>
             <tr>
                 <th>
                 <input type="checkbox" id="parent" class="regular-checkbox big-checkbox" />  
                   <label for="parent"></label>
                  </th>
-                <th>ID</th>
-                <th>Restaurant</th>
-                <th>Status</th>
-                <th>Start date</th>
-                <th>End date</th>
-                <th>Total</th>
-                <th>Fees</th>
-                <th>Transfer</th>
-                <th>Orders</th>
+                <th><?php echo __('ID', 'food-app');?></th>
+                <th><?php echo __('Restaurant', 'food-app');?></th>
+                <th><?php echo __('Status', 'food-app');?></th>
+                <th><?php echo __('Start date', 'food-app');?></th>
+                <th><?php echo __('End date', 'food-app');?></th>
+                <th><?php echo __('Total', 'food-app');?></th>
+                <th><?php echo __('Fees', 'food-app');?></th>
+                <th><?php echo __('Transfers', 'food-app');?></th>
+                <th><?php echo __('Orders', 'food-app');?></th>
                 <th></th>
                 <th></th>
                 <th></th>
