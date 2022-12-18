@@ -41,9 +41,8 @@ if( ! class_exists( 'ACF' ) ) {
     // Define path and URL to the ACF plugin.
     define( 'MY_ACF_PATH', FA_DIR . '/vendor/advanced-custom-fields/' );
     define( 'MY_ACF_URL', FA_URL . '/vendor/advanced-custom-fields/' );
-    // Include the ACF plugin.
+
     include_once( MY_ACF_PATH . 'acf.php' );
-    // Customize the url setting to fix incorrect asset URLs.
     add_filter( 'acf/settings/url', function( $url ) {
         return MY_ACF_URL;
     } );
@@ -52,6 +51,15 @@ if( ! class_exists( 'ACF' ) ) {
         return false;
     } );
 }
+
+function food_app_menu() {
+    register_nav_menus(
+        array(
+            'food-app-menu' => _( 'FoodApp Menu Invoices' ),
+        )
+    );
+}
+add_action( 'init', 'food_app_menu' );
 
 
 register_activation_hook(__FILE__, 'newplugin_install');
@@ -71,6 +79,7 @@ function newplugin_install() {
         $transfer = $mydecode[$i]->order_transfer;
         $count = $mydecode[$i]->order_count;
         $status = $mydecode[$i]->order_status;
+        $thumbnail = $mydecode[$i]->order_image;
             // Check if already exists
             $get_page = get_page_by_title( $title, null, 'invoices');
             
@@ -96,9 +105,9 @@ function newplugin_install() {
                 update_field('field_invoice_fields_invoice_transfer', $transfer, $post_id);
                 update_field('field_invoice_fields_invoice_orders', $count, $post_id);
                 update_field('field_invoice_fields_invoice_status', $status, $post_id);
+                update_field('field_invoice_fields_invoice_image', $thumbnail, $post_id);
        
-            }
-            
+            }    
     }
 }
 

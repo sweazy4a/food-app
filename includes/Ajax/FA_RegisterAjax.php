@@ -19,6 +19,6 @@ class FA_RegisterAjax
         add_action( 'wp_ajax_nopriv_LoadInvoices',[new FA_InvoicesTable(), 'loadInvoices'] );
 
         add_action( 'wp_ajax_ChangeStatus',[new FA_ChangeStatus(), 'changeStatus'] );
-        add_action( 'wp_ajax_ChangeStatus',[new FA_ChangeStatus(), 'changeStatus'] );  
+        add_action( 'wp_ajax_nopriv_ChangeStatus',[new FA_ChangeStatus(), 'changeStatus'] );  
     }
 }

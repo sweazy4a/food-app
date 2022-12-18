@@ -1,5 +1,11 @@
 <div class = "invoice-pagination-nav">
-    <div class='invoice-universal-pagination'>
+    <div class="invoice_total_page_count">
+    <?php 
+         echo 'Page ' . $cur_page . ' of ' . $no_of_paginations ;
+      ?>
+    </div>
+
+<div class='invoice-universal-pagination'>
             <ul>
         <?php
         if ($first_btn && $cur_page > 1) {
@@ -36,7 +42,6 @@
         }
 
         echo $pag_container;
-  
         ?>
             </ul>
         </div>

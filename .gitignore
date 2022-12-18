@@ -1,0 +1,11 @@
+/node_modules
+/package-lock.json
+/composer.lock
+/generatedPdf
+
+# Hidden system files
+.DS_Store
+*.DS_Store
+**/.DS_Store
+*[Tt]humbs.db
+*.Trashes 

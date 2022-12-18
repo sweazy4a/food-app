@@ -1,0 +1,27 @@
+{
+    "name": "food-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "mix",
+        "build:production": "mix --production",
+        "start": "mix watch",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "laravel-mix": "^6.0.31",
+        "laravel-mix-clean": "^0.1.0",
+        "lodash": "^4.17.21",
+        "postcss": "^8.2.9",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.41.1",
+        "sass-loader": "^11.0.1"
+    },
+    "dependencies": {
+        "awesome-notifications": "^3.1.2",
+        "bootstrap-wizard": "^1.4.2"
+    }
+}

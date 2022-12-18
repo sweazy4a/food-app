@@ -1,0 +1,60 @@
+@import "../setup.scss";
+
+#invoice-header {
+  background: $dark;
+  padding: 10px 45px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .menu-content-left {
+    max-width: 50%;
+    display: flex;
+    align-items: center;
+    .food-logo {
+      img {
+        width: 38px;
+        height: auto;
+      }
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      padding-left: 20px;
+      li {
+        margin-left: 6px;
+        margin-right: 6px;
+        padding: 3px 6px;
+        display: flex;
+        a {
+          color: $white;
+          font-size: 14px;
+          text-decoration: none;
+          font-weight: 600;
+        }
+        &:hover {
+          transition: all 0.3s ease-in-out;
+          background: $bg-currentmenu-dk;
+          border-radius: 4px;
+        }
+      }
+      .current-menu-item {
+        background: $bg-currentmenu-dk;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .menu-content-right {
+    max-width: 25%;
+    .login-user {
+      color: $white;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 14px;
+    }
+  }
+}

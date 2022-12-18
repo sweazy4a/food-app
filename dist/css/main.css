@@ -1,0 +1,758 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap);
+@charset "UTF-8";
+p, a, h1, h2, h3, h4, div, span, strong, td, th, tr, button, ul, li {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.page-template-page-template-invoices #masthead {
+  display: none;
+}
+.page-template-page-template-invoices #wpadminbar {
+  display: none;
+}
+
+.disallow {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body #main input:focus {
+  outline: none;
+}
+
+#invoice-header {
+  background: #000;
+  padding: 10px 45px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#invoice-header .menu-content-left {
+  max-width: 50%;
+  display: flex;
+  align-items: center;
+}
+#invoice-header .menu-content-left .food-logo img {
+  width: 38px;
+  height: auto;
+}
+#invoice-header .menu-content-left ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+#invoice-header .menu-content-left ul li {
+  margin-left: 6px;
+  margin-right: 6px;
+  padding: 3px 6px;
+  display: flex;
+}
+#invoice-header .menu-content-left ul li a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 600;
+}
+#invoice-header .menu-content-left ul li:hover {
+  transition: all 0.3s ease-in-out;
+  background: #3b3b3d;
+  border-radius: 4px;
+}
+#invoice-header .menu-content-left ul .current-menu-item {
+  background: #3b3b3d;
+  border-radius: 4px;
+}
+#invoice-header .menu-content-right {
+  max-width: 25%;
+}
+#invoice-header .menu-content-right .login-user {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+p, a, h1, h2, h3, h4, div, span, strong, td, th, tr, button, ul, li {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.page-template-page-template-invoices #masthead {
+  display: none;
+}
+.page-template-page-template-invoices #wpadminbar {
+  display: none;
+}
+
+.disallow {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body #main input:focus {
+  outline: none;
+}
+
+.invoice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 800px) {
+  .invoice-row {
+    flex-direction: column;
+  }
+}
+.invoice-row--menu {
+  width: 27%;
+}
+@media (max-width: 800px) {
+  .invoice-row--menu {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+}
+.invoice-row--menu ul {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  list-style-type: none;
+  padding: 0px;
+}
+@media (max-width: 800px) {
+  .invoice-row--menu ul {
+    flex-wrap: wrap;
+  }
+}
+.invoice-row--menu ul li {
+  padding: 4px 8px;
+  text-transform: uppercase;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #6c7383;
+  box-shadow: none;
+}
+.invoice-row--menu ul li:hover {
+  background: #ff9501;
+  transition: all 0.3s ease-in-out;
+  border-radius: 6px;
+  color: white;
+}
+@media (max-width: 800px) {
+  .invoice-row--menu ul li {
+    font-size: 15px;
+  }
+}
+.invoice-row--menu ul .active-item {
+  background-color: #6c7383;
+  color: white;
+  border-radius: 6px;
+}
+.invoice-row--menu ul .active-item:hover {
+  border: none;
+  background-color: #6c7383;
+}
+.invoice-row--nav {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 1100px) {
+  .invoice-row--nav {
+    width: 70%;
+  }
+}
+@media (max-width: 800px) {
+  .invoice-row--nav {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.invoice-row--nav .datefilter {
+  width: 40%;
+  display: flex;
+  background: #f1f2f4;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .invoice-row--nav .datefilter {
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+.invoice-row--nav .datefilter .datepicker-txt {
+  border: 1px solid #c2bfbf;
+  font-size: 11.2px;
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  height: 30px;
+  margin-right: -4px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+.invoice-row--nav .datefilter .datepicker-txt img {
+  width: 13.2px;
+  height: auto;
+  margin-right: 5px;
+}
+.invoice-row--nav .datefilter .datepicker-row {
+  position: relative;
+  display: flex;
+}
+.invoice-row--nav .datefilter .datepicker-row input {
+  width: 100px;
+  height: 30px;
+  border: 1px solid #c2bfbf;
+  font-size: 12px;
+  text-align: center;
+}
+@media (max-width: 800px) {
+  .invoice-row--nav .datefilter .datepicker-row input {
+    width: 70%;
+  }
+}
+.invoice-row--nav .datefilter .datepicker-row .arrow-1 {
+  position: absolute;
+  top: 50%; /* position the top  edge of the element at the middle of the parent */
+  left: 50%; /* position the left edge of the element at the middle of the parent */
+  transform: translate(-50%, -50%);
+}
+.invoice-row--nav .datefilter .datepicker-row #min {
+  border-right: none;
+}
+.invoice-row--nav .datefilter .datepicker-row #max {
+  border-left: none;
+  margin-left: -2px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.invoice-row--nav .searchbox {
+  display: flex;
+  align-items: center;
+  width: 52%;
+  justify-content: space-between;
+  position: relative;
+}
+@media (max-width: 800px) {
+  .invoice-row--nav .searchbox {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.invoice-row--nav .searchbox img {
+  position: absolute;
+  left: 12px;
+  width: 14px;
+  height: auto;
+  opacity: 0.5;
+}
+@media (max-width: 800px) {
+  .invoice-row--nav .searchbox img {
+    top: 7px;
+  }
+}
+.invoice-row--nav .searchbox input {
+  height: 30px;
+  border: 1px solid #c2bfbf;
+  width: 60%;
+  display: flex;
+  font-size: 11.2px;
+  padding-left: 30px;
+  border-radius: 4px;
+}
+@media (max-width: 800px) {
+  .invoice-row--nav .searchbox input {
+    width: 100%;
+  }
+}
+.invoice-row--nav .searchbox #btn_status {
+  background: #ff9501;
+  color: white;
+  width: 35%;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  padding: 5px;
+  justify-content: center;
+  border-radius: 6px;
+  border: none !important;
+  outline: none !important;
+  box-shadow: 0;
+}
+.invoice-row--nav .searchbox #btn_status:hover {
+  transform: scale(0.99);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 2px 16px 1px rgb(199, 199, 199);
+}
+@media (max-width: 800px) {
+  .invoice-row--nav .searchbox #btn_status {
+    margin-top: 15px;
+  }
+}
+
+p, a, h1, h2, h3, h4, div, span, strong, td, th, tr, button, ul, li {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.page-template-page-template-invoices #masthead {
+  display: none;
+}
+.page-template-page-template-invoices #wpadminbar {
+  display: none;
+}
+
+.disallow {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body #main input:focus {
+  outline: none;
+}
+
+.invoice-pagination-nav {
+  background: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 12px 25px 12px;
+  align-items: center;
+  border-left: 1px solid #c2bfbf;
+  border-right: 1px solid #c2bfbf;
+  border-bottom: 1px solid #c2bfbf;
+  padding-bottom: 25px;
+  border-radius: 0px 0px 4px 4px;
+}
+@media (max-width: 800px) {
+  .invoice-pagination-nav {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+.invoice-pagination-nav .invoice_total_page_count {
+  font-size: 11px;
+  color: #949598;
+}
+@media (max-width: 800px) {
+  .invoice-pagination-nav .invoice-universal-pagination {
+    padding-top: 14px;
+  }
+}
+.invoice-pagination-nav .invoice-universal-pagination ul {
+  display: flex;
+  list-style-type: none;
+}
+@media (max-width: 800px) {
+  .invoice-pagination-nav .invoice-universal-pagination ul {
+    padding-left: 0px;
+  }
+}
+.invoice-pagination-nav .invoice-universal-pagination ul li {
+  cursor: pointer;
+  padding: 2px 10px;
+  color: #949598;
+  border: 1px solid #f1f1f1;
+  opacity: 0.9;
+  font-size: 12px;
+}
+.invoice-pagination-nav .invoice-universal-pagination ul .selected {
+  color: #000;
+  background: #f1f1f1;
+  opacity: 10;
+}
+.invoice-pagination-nav .invoice-universal-pagination ul li + li {
+  border-left: 0;
+}
+
+p, a, h1, h2, h3, h4, div, span, strong, td, th, tr, button, ul, li {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.page-template-page-template-invoices #masthead {
+  display: none;
+}
+.page-template-page-template-invoices #wpadminbar {
+  display: none;
+}
+
+.disallow {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body #main input:focus {
+  outline: none;
+}
+
+.page-template-page-template-invoices {
+  background: #f7f8fa;
+}
+.page-template-page-template-invoices .invoice {
+  width: 1100px;
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  background: #f7f8fa;
+  overflow: hidden;
+  padding-top: 140px;
+}
+@media (max-width: 1100px) {
+  .page-template-page-template-invoices .invoice {
+    width: 100%;
+    padding-top: 80px;
+  }
+}
+@media (max-width: 1100px) {
+  .page-template-page-template-invoices .invoice #table_wrapper {
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+.page-template-page-template-invoices .invoice h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-weight: 500;
+}
+.page-template-page-template-invoices .invoice .invoice_load {
+  padding: 0px;
+  margin-top: 15px;
+}
+@media (max-width: 800px) {
+  .page-template-page-template-invoices .invoice .invoice_load {
+    margin-top: 30px;
+  }
+}
+.page-template-page-template-invoices .invoice .invoice_load--container {
+  width: 100%;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table {
+  border: 1px solid #c2bfbf;
+  border-radius: 4px 4px 0px 0px;
+  border-bottom: 0px;
+  width: 100% !important;
+}
+@media (max-width: 800px) {
+  .page-template-page-template-invoices .invoice .invoice_load #table {
+    overflow-x: auto !important;
+  }
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .status-VERIFIED {
+  background: #7fcaab;
+  color: white;
+  font-size: 9px;
+  text-align: center;
+  max-width: 90%;
+  border-radius: 20px;
+  padding: 3px 6px;
+  font-weight: 600;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .status-ONGOING {
+  background: #e6e7eb;
+  color: #000;
+  font-size: 9px;
+  text-align: center;
+  max-width: 90%;
+  border-radius: 20px;
+  padding: 3px 6px;
+  font-weight: 600;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .status-PENDING {
+  background: #ff9501;
+  color: white;
+  font-size: 9px;
+  text-align: center;
+  max-width: 90%;
+  border-radius: 20px;
+  padding: 3px 6px;
+  font-weight: 600;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .regular-checkbox {
+  background-color: #cc9e5d;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table label {
+  display: inline;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .regular-checkbox {
+  display: none;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .regular-checkbox + label {
+  cursor: pointer;
+  background-color: white;
+  border: 1.5px solid #cacece;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 9px;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .regular-checkbox:checked + label {
+  background-color: #ff9501 !important;
+  border: 1px solid #adb8c0;
+  color: white;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .regular-checkbox:checked + label:after {
+  content: "✔";
+  font-size: 10px;
+  position: absolute;
+  top: -2px;
+  left: 3px;
+  color: white;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .big-checkbox + label {
+  padding: 10px;
+  transform: scale(0.72);
+  margin-bottom: -10px;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table .big-checkbox:checked + label:after {
+  font-size: 14px;
+  left: 4px;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table th {
+  color: #949598;
+  background: white;
+  font-size: 10px;
+  font-weight: 500;
+  border: none;
+  padding: 7px;
+  text-align: left;
+  border-bottom: 1px solid #c2bfbf;
+  text-transform: uppercase;
+  padding: 12px 7px;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table tbody tr {
+  background: white;
+  box-shadow: 0;
+  transition: box-shadow 1s;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table tbody tr:hover {
+  transform: scale(1.04);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 2px 18px 18px 4px rgba(143, 139, 143, 0.46);
+}
+.page-template-page-template-invoices .invoice .invoice_load #table tbody td {
+  background: white;
+  padding: 12px 7px;
+  font-size: 13px;
+  border: none;
+  border-bottom: 1px solid #c2bfbf;
+  box-shadow: none;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table tbody td .download-img {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table tbody td .thumb {
+  width: 22px;
+  height: auto;
+  margin-right: 5px;
+}
+.page-template-page-template-invoices .invoice .invoice_load #table tbody td #irow {
+  transform: scale(0.6);
+}
+.page-template-page-template-invoices .invoice .dataTables_filter {
+  display: none;
+}
+
+p, a, h1, h2, h3, h4, div, span, strong, td, th, tr, button, ul, li {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.page-template-page-template-invoices #masthead {
+  display: none;
+}
+.page-template-page-template-invoices #wpadminbar {
+  display: none;
+}
+
+.disallow {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body #main input:focus {
+  outline: none;
+}
+
+div.dt-datetime .dt-datetime-title button {
+  background: transparent !important;
+}
+div.dt-datetime div.dt-datetime-label {
+  font-size: 14px !important;
+  padding: 0px !important;
+}
+div.dt-datetime div.dt-datetime-label:hover {
+  background: transparent !important;
+}
+div.dt-datetime table button span {
+  font-size: 11px;
+}
+div.dt-datetime table button:hover {
+  background: #ff9501 !important;
+}
+div.dt-datetime table th {
+  font-size: 11px !important;
+  font-weight: 600 !important;
+}
+div.dt-datetime table td.selectable.selected button {
+  background: #ff9501 !important;
+}
+
+p, a, h1, h2, h3, h4, div, span, strong, td, th, tr, button, ul, li {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.page-template-page-template-invoices #masthead {
+  display: none;
+}
+.page-template-page-template-invoices #wpadminbar {
+  display: none;
+}
+
+.disallow {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+body #main input:focus {
+  outline: none;
+}
+
+.mobnav {
+  display: none;
+}
+@media (max-width: 1100px) {
+  .mobnav {
+    display: block;
+    position: fixed;
+    top: -75px;
+    left: 0px;
+    z-index: 99;
+  }
+  .mobnav #menuToggle {
+    background: #000;
+    padding: 17px;
+    border-radius: 50%;
+    transform: scale(0.8);
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+         user-select: none;
+  }
+  .mobnav #menuToggle a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  .mobnav #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
+  .mobnav #menuToggle input:checked ~ ul {
+    transform: none;
+  }
+}
+
+@media (max-width: 1100px) {
+  .desknav {
+    display: none !important;
+  }
+}
+
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle span:first-child {
+  transform-origin: 0% 0%;
+}
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%;
+}
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: white;
+}
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: #000;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+#menu .login-user {
+  font-style: italic;
+  color: #f1f1f1;
+  font-weight: 300;
+}
+#menu ul {
+  list-style-type: none;
+}
+#menu ul li {
+  padding: 10px 0;
+  font-size: 22px;
+}
+#menu ul li a {
+  color: white;
+}
+#menu ul .current-menu-item {
+  border-bottom: 2px solid white;
+  border-radius: 4px;
+}
+
+/* Onshrink */
+.smaller {
+  transform: scale(0.6) !important;
+  transition: all 0.4s ease-in-out !important;
+}
