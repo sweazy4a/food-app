@@ -1,4 +1,4 @@
-<header id="invoice-header">
+<header class="desknav" id="invoice-header">
     <div class="menu-content-left">
         <div class="food-logo">
             <a href="#">
@@ -14,6 +14,8 @@
 ?>
 </div>
 
+
+
 <div class="menu-content-right">
         <?php global $current_user; wp_get_current_user(); ?>
         <?php if ( is_user_logged_in() ) { 
@@ -28,3 +30,22 @@
         } ?>
 </div>
 </header>
+
+<!-- Mobile nav -->
+<nav class="mobnav" role="navigation">
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+         <?php 
+         wp_nav_menu( 
+            array( 
+                  'theme_location' => 'my-custom-menu'
+            ) 
+         ); 
+      ?>
+    </ul>
+  </div>
+</nav>

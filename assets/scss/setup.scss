@@ -13,6 +13,9 @@ $bg-lt:#f1f2f4;
 $bg-main:#f7f8fa;
 $bg-currentmenu-dk:#3b3b3d;
 
+
+@import "breakpoints.scss";
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
 $font:'Open Sans', sans-serif;
 
