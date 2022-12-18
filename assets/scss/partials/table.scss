@@ -22,6 +22,7 @@
     background:$bg-main;
     overflow:hidden;
     padding-top: 140px;
+    position:relative;
     
     @include respond-below(md) {
       width:100%;

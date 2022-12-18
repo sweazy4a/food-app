@@ -68,8 +68,9 @@ function newplugin_install() {
     $json = FA_DIR . "/orders/data.json";
     $response = file_get_contents($json);
     $mydecode = json_decode($response);
+    $length = count($mydecode);
 
-    for ($i = 0; $i < 10; $i++) {
+    for ($i = 0; $i < $length; $i++) {
         $title = str_replace("&amp;", "&", $mydecode[$i]->order_title);
         $order_id = $mydecode[$i]->order_id;
         $start_date = str_replace("&amp;", "&", $mydecode[$i]->order_start_date);
