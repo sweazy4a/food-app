@@ -12,10 +12,9 @@ class FA_Enqueue
 {
     public function __construct()
     {
-        add_action( 'admin_enqueue_scripts',  [$this, 'enqueueScripts']);
+        add_action( 'admin_enqueue_scripts',  [$this, 'enqueueScriptsAdmin']);
         add_action( 'wp_enqueue_scripts',  [$this, 'enqueueScripts']);
     }
-
 
     public function enqueueScripts()
     {
@@ -47,6 +46,11 @@ class FA_Enqueue
             wp_enqueue_style('datetime-style', 'https://cdn.datatables.net/datetime/1.2.0/css/dataTables.dateTime.min.css');
 
         }
+    }
+
+    /* Admin styles , scripts */
+    public function enqueueScriptsAdmin(){
+        wp_enqueue_style('acf-admin', FA_URL . 'dist/css/admin/acf.css');
     }
 
 }

@@ -3,7 +3,7 @@
         'name' => 'app/food-app',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => '88ba14340dd5b0fdce467f056041ba57ed253b95',
+        'reference' => 'f4203662bad89fb8df1dbe70abc9b638af781913',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         'app/food-app' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => '88ba14340dd5b0fdce467f056041ba57ed253b95',
+            'reference' => 'f4203662bad89fb8df1dbe70abc9b638af781913',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

@@ -111,5 +111,10 @@ function newplugin_install() {
     }
 }
 
+/* Remove flush */
+remove_action( 'shutdown', 'wp_ob_end_flush_all', 1 );
+add_action( 'shutdown', function() {
+   while ( @ob_end_flush() );
+} );
 
 FA_Init::register();

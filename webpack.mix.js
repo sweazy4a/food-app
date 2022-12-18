@@ -5,6 +5,7 @@ mix
   .setPublicPath("dist")
 
   mix.sass("assets/scss/main.scss", "dist/css");
+  mix.sass("assets/scss/admin/acf.scss", "dist/css/admin");
   mix.js("assets/js/main.js", "dist/js");
 
   mix.copyDirectory("assets/img", "dist/img");
