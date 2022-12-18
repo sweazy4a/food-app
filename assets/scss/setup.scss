@@ -1,10 +1,45 @@
 $primary-lt: #d6933e;
 $action-md: #ff9501;
-$active: #6c7481;
+$active: #6c7383;
 $grey-md: #949598;
 $grey-dk: #434547;
 $grey-lt: #c2bfbf;
+$grey-lt-lt: #f1f1f1;
 $dark: #000;
 $white: #ffff;
 $verified: #7fcaab;
 $ongoing: #e6e7eb;
+$bg-lt:#f1f2f4;
+$bg-main:#f7f8fa;
+$bg-currentmenu-dk:#3b3b3d;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+$font:'Open Sans', sans-serif;
+
+p , a , h1 , h2 ,h3 , h4 , div , span , strong, td ,th , tr, button, ul , li{
+    font-family:$font!important;
+}
+
+
+.page-template-page-template-invoices {
+    #masthead{
+      display:none;
+    }
+    #wpadminbar{
+        display:none;
+    }
+}
+
+.disallow{
+    pointer-events: none;
+    opacity:0.5;
+}
+
+body #main input {
+    &:focus{
+        outline:none;
+    }
+}
+
+
+

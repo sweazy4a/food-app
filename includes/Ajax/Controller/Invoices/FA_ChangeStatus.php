@@ -5,7 +5,6 @@ if (!defined('ABSPATH')) {
     die;
 }
 
-use StoutLogic\AcfBuilder\FieldsBuilder;
 
 /**
  * Class FA_ChangeStatus

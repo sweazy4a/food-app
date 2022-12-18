@@ -67,9 +67,12 @@ public function loadInvoices() {
     <table id="table" class="display nowrap" style="width:100%">
         <thead>
             <tr>
-                <th>1</th>
+                <th>
+                <input type="checkbox" id="parent" class="regular-checkbox big-checkbox" />  
+                  <label for="parent"></label>
+                 </th>
                 <th>ID</th>
-                <th>Name</th>
+                <th>Restaurant</th>
                 <th>Status</th>
                 <th>Start date</th>
                 <th>End date</th>
@@ -77,12 +80,13 @@ public function loadInvoices() {
                 <th>Fees</th>
                 <th>Transfer</th>
                 <th>Orders</th>
-                <th>x</th>
+                <th></th>
+                <th></th>
                 <th></th>
             </tr>
         </thead>
         <tbody class ="invoice-pagination-content">
-            
+
        <?php
         foreach($all_blog_posts as $key => $post): 
           include('table-row-view.php') ;

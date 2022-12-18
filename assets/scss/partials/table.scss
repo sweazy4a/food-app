@@ -3,22 +3,29 @@
 @mixin status-view {
   font-size: 9px;
   text-align: center;
-  max-width: 70%;
+  max-width: 90%;
   border-radius: 20px;
-  padding:2px 3px;
-
+  padding: 3px 6px;
+  font-weight: 600;
 }
 
+
 .page-template-page-template-invoices {
-  background: #8a8a8a;
+  background: $bg-main;
+
+
 
   .invoice {
-    width: 1100px;
-    padding:25px 50px;
+    width: 1050px;
+    padding:25px 30px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    background:$white;
+    background:$bg-main;
+
+    h2{
+      margin-bottom:40px;
+    }
 
     .invoice_load {
       padding: 0px;
@@ -30,8 +37,8 @@
       // &--content{
       #table {
         border: 1px solid $grey-lt;
-        border-radius: 4px;
-
+        border-radius: 4px 4px 0px 0px;
+        border-bottom:0px;
         .status-VERIFIED {
           background: $verified;
           color: $white;
@@ -64,7 +71,7 @@
         .regular-checkbox + label {
           cursor:pointer;
           background-color: white;
-          border: 1px solid #cacece;
+          border: 1.5px solid #cacece;
           box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
             inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
           padding: 9px;
@@ -95,7 +102,7 @@
 
         .big-checkbox + label {
           padding: 10px;
-          transform: scale(0.8);
+          transform: scale(0.72);
           margin-bottom: -10px;
         }
 
@@ -106,25 +113,48 @@
 
         th {
           color: $grey-md;
-          font-size: 12px;
+          background:$white;
+          font-size: 10px;
           font-weight: 500;
           border: none;
           padding: 7px;
           text-align: left;
           border-bottom: 1px solid $grey-lt;
+          text-transform:uppercase;
+          padding: 12px 7px;
         }
         tbody {
           tr {
             background: $white;
-            box-shadow: none;
+            box-shadow: 0;
+            transition: box-shadow 1s;
+            
+            &:hover{
+              transform:scale(1.04);
+              transition:all 0.3s ease-in-out;
+              -webkit-box-shadow: 2px 18px 18px 4px rgba(143,139,143,0.46);
+              -moz-box-shadow: 2px 18px 18px 4px rgba(143,139,143,0.46);
+              box-shadow: 2px 18px 18px 4px rgba(143,139,143,0.46);
+            }  
           }
           td {
             background: $white;
-            padding: 7px;
+            padding: 12px 7px;
             font-size: 13px;
             border: none;
             border-bottom: 1px solid $grey-lt;
             box-shadow: none;
+
+            .download-img{
+              padding-left:5px;
+              padding-right:5px;
+            }
+            
+            .thumb{
+              width: 22px;
+              height: auto;
+              margin-right:5px;
+            }
             #irow {
               transform: scale(0.6);
             }

@@ -7,6 +7,8 @@ mix
   mix.sass("assets/scss/main.scss", "dist/css");
   mix.js("assets/js/main.js", "dist/js");
 
+  mix.copyDirectory("assets/img", "dist/img");
+
 if (mix.inProduction()) {
   mix.clean();
 }

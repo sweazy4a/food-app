@@ -53,6 +53,15 @@ if( ! class_exists( 'ACF' ) ) {
     } );
 }
 
+function my_custom_menu() {
+    register_nav_menus(
+        array(
+            'my-custom-menu' => _( 'My Custom Menu' ),
+        )
+    );
+}
+add_action( 'init', 'my_custom_menu' );
+
 
 register_activation_hook(__FILE__, 'newplugin_install');
 function newplugin_install() {
@@ -71,6 +80,7 @@ function newplugin_install() {
         $transfer = $mydecode[$i]->order_transfer;
         $count = $mydecode[$i]->order_count;
         $status = $mydecode[$i]->order_status;
+        $thumbnail = $mydecode[$i]->order_image;
             // Check if already exists
             $get_page = get_page_by_title( $title, null, 'invoices');
             
@@ -96,6 +106,8 @@ function newplugin_install() {
                 update_field('field_invoice_fields_invoice_transfer', $transfer, $post_id);
                 update_field('field_invoice_fields_invoice_orders', $count, $post_id);
                 update_field('field_invoice_fields_invoice_status', $status, $post_id);
+                update_field('field_invoice_fields_invoice_image', $thumbnail, $post_id);
+
        
             }
             

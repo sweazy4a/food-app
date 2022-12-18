@@ -129,6 +129,12 @@ class FA_Invoice
                 'class' => 'disallow'
             ]
         ])
+        ->addText('invoice_image', [
+            'label' => 'Thumbnail',
+            'wrapper' => [
+                'class' => 'disallow'
+            ]
+        ])
         ->addFile('invoice_file', [
             'label' => 'Full information',
             'required' => 0,

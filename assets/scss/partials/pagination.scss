@@ -1,8 +1,46 @@
-.invoice_load {
-    padding: 20px;
-    .invoice-universal-pagination ul {margin: 0; padding: 0;}
-    .invoice-universal-pagination ul li {display: inline; margin: 3px; padding: 4px 8px; background: #FFF; color: black; }
-    .invoice-universal-pagination ul li.active:hover {cursor: pointer; background: #1E8CBE; color: white; }
-    .invoice-universal-pagination ul li.inactive {background: #7E7E7E;}
-    .invoice-universal-pagination ul li.selected {background: #1E8CBE; color: white;}
+@import"../setup.scss";
+
+.invoice-pagination-nav{
+    background:$white;
+    display:flex;
+    justify-content: space-between;
+    padding:25px 12px 25px 12px;
+    align-items:center;
+    border-left:1px solid $grey-lt;
+    border-right:1px solid $grey-lt;
+    border-bottom:1px solid $grey-lt;
+    padding-bottom:25px;
+    border-radius:0px 0px 4px 4px;
+
+    .invoice_total_page_count{
+        font-size:11px;
+        color:$grey-md;
+    }
+
+
+.invoice-universal-pagination{
+    ul{
+        display:flex;
+        list-style-type: none;
+        li{
+            cursor:pointer;
+            padding:2px 10px;
+            color:$grey-md;
+            border:1px solid $grey-lt-lt;
+            opacity:0.9;
+            font-size:12px;
+        }
+        .selected{
+            color:$dark;
+            background:$grey-lt-lt;
+            opacity:10;
+        }
+
+
+        li + li{
+            border-left: 0;
+        }
+    }
+}
+
 }

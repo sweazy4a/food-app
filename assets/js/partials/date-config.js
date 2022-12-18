@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+	function initDateConfig(){
 	setTimeout(function() {
 		var minDate, maxDate;
 
@@ -28,16 +30,41 @@ $(document).ready(function() {
 		maxDate = new DateTime($('#max'), {
 			format: 'DD/MM/YYYY'
 		});
-
+	
 		// DataTables initialisation
 		var table = $('#table').DataTable({
-			stateSave: true,
+            "language": {
+                "info": "",
+            },
+			"bPaginate": false, //hide pagination
+			"bFilter": true, //hide Search bar
+			"bInfo": false, // hide showing entr
+			stateSave: false,
 			"bDestroy": true,
-			columnDefs: [{
+			columnDefs: [
+				{
 				target: 11,
 				visible: false,
 				searchable: true,
-			}],
+			},
+			{
+				target: 12,
+				visible: false,
+				searchable: true,
+			},
+			{
+			 target: 0,
+			'orderable': false,
+			},
+			{
+				target: 10,
+			   'orderable': false,
+			}
+
+		],
+
+
+            
 		});
 
 		// Refilter the table
@@ -51,6 +78,55 @@ $(document).ready(function() {
 			table.search($(this).val()).draw();
 		})
 
+		function filterColumn( value ) {
+			table.column(3).search( value ).draw();
+		  }
+		
+		$('.btn_status-filter').on('click', function () {
+			let value = $(this).attr("status-filter");
+			console.log('value', value);
+			filterColumn(value);
+		  })
+
+
+		  $('.btn_all').on('click', function () {
+			$('#table').DataTable().columns('').search('').draw(); 
+		  })
+
+
+		  $('.btn-menu').on('click', function () {
+			$('.invoice-row--menu ul li').removeClass('active-item');
+			$(this).addClass('active-item');
+		  })
+
+
+
+		  
+$(document).ready(function() {
+	$("#parent").click(function() {
+	  $(".child").prop("checked", this.checked);
+	});
+  
+	$('.child').click(function() {
+	  if ($('.child:checked').length == $('.child').length) {
+		$('#parent').prop('checked', true);
+	  } else {
+		$('#parent').prop('checked', false);
+	  }
+	});
+  });
 	}, 2000);
 
+
+	}
+	initDateConfig();
+
+
+$("body").delegate(".invoice_container .invoice-universal-pagination li.active", "click", function(){
+	initDateConfig();
 });
+
+
+
+});
+

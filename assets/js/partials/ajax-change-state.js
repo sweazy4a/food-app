@@ -2,13 +2,15 @@
 $(document).ready(function() {
     $('#btn_status').on('click', function(e) {
     
-        $('input[type="checkbox"]').each(function (page) {
+        $('input[type="checkbox"]:checked').each(function (page) {
             let ids = [];
             $this = $(this);
             let verified = 'VERIFIED';
             let status_value = $this.parent().siblings('td').eq(2).text();
+            console.log('statusvalue', status_value);
             let val = $(this).closest("tr").attr("data-id");
             ids.push(val);
+            // console.log('ids', ids);
     
             if(status_value !== verified){
                 
