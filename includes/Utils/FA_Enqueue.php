@@ -14,22 +14,19 @@ class FA_Enqueue
     {
         add_action( 'admin_enqueue_scripts',  [$this, 'enqueueScriptsAdmin']);
         add_action( 'wp_enqueue_scripts',  [$this, 'enqueueScripts']);
+        add_action( 'wp_enqueue_scripts', [$this, 'remove_jquery'] );
+
     }
 
+   public function remove_jquery() {
+        wp_deregister_script( 'jquery' );
+    }
+    
     public function enqueueScripts()
     {
         wp_enqueue_script('jquery-min-2', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js');
         wp_enqueue_script('jquery-data', 'https://code.jquery.com/jquery-3.5.1.js');
-        wp_enqueue_script( 'invoice-ajax', FA_URL . '/dist/js/main.js', [], '1.0', );
 
-        /* Localize ajax */
-        wp_localize_script( 'invoice-ajax', 'invoice',
-            [ 
-                'ajaxUrl' => FA_AJAX,
-                'ajaxnonce' => wp_create_nonce('ajax-nonce'),
-                'theajax' => admin_url('admin-ajax.php'),
-            ]
-         );
          
         global $template;
         $getTemplate = basename($template);
@@ -38,7 +35,16 @@ class FA_Enqueue
             wp_enqueue_script('datatable-script', 'https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js');
             wp_enqueue_script('moment-script', 'https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.2/moment.min.js');
             wp_enqueue_script('datetime-script', 'https://cdn.datatables.net/datetime/1.2.0/js/dataTables.dateTime.min.js');
-            wp_enqueue_script('main-script', FA_URL . '/dist/js/main.js');
+            wp_enqueue_script( 'invoice-ajax', FA_URL . '/dist/js/main.js', [], '1.0', );
+        
+              /* Localize ajax */      
+            wp_localize_script( 'invoice-ajax', 'invoice',
+            [ 
+                'ajaxUrl' => FA_AJAX,
+                'ajaxnonce' => wp_create_nonce('ajax-nonce'),
+                'theajax' => admin_url('admin-ajax.php'),
+            ]
+         );
 
             /* Styles */
             wp_enqueue_style('main-style', FA_URL . '/dist/css/main.css');
