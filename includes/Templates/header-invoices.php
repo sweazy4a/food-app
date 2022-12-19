@@ -6,19 +6,19 @@
             </a>
         </div>
         <?php wp_nav_menu( ['theme_location' => 'food-app-menu']); ?>
-</div>
+    </div>
 
-<div class="menu-content-right">
-        <?php global $current_user; wp_get_current_user(); 
-        if ( is_user_logged_in() ) { 
-        ?>
-        <p class="login-user"><?php echo $current_user->display_name;?></p>
-         <?php
-        }
-        else {  ?>
-            <a class="login-user" href="<?php echo admin_url();?>"><?php echo __('Login', 'food-app');?></a>
-     <?php } ?>
-</div>
+    <div class="menu-content-right">
+            <?php global $current_user; wp_get_current_user(); 
+            if ( is_user_logged_in() ) { 
+            ?>
+            <p class="login-user"><?php echo $current_user->display_name;?></p>
+            <?php
+            }
+            else {  ?>
+                <a class="login-user" href="<?php echo admin_url();?>"><?php echo __('Login', 'food-app');?></a>
+        <?php } ?>
+    </div>
 </header>
 
 <!-- Mobile nav -->

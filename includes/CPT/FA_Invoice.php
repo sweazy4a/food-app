@@ -19,11 +19,9 @@ class FA_Invoice
     public function __construct()
     {
         add_action( 'init', array($this, 'registerCptInvoices'));
-        // add_action( 'admin_menu', array($this, 'hideSubmenu'));
         add_action( 'acf/init', array($this, 'acfFieldsInvoices' ));
-        // add_action('add_meta_boxes',array($this, 'hewalexDataMetabox'));
-
     }   
+
     public function registerCptInvoices()
     {
         $args = array(
@@ -51,14 +49,9 @@ class FA_Invoice
     }
 
 
-    // public function insertPost(){
-        
-    // }
 
     public function acfFieldsInvoices()
     {
-
-
      $invoice_schema = new FieldsBuilder('invoice_fields');
      $invoice_schema
         ->addText('invoice_id', [
@@ -153,6 +146,5 @@ class FA_Invoice
     
      ->setLocation('post_type', '==', self::CPT_NAME);
        acf_add_local_field_group($invoice_schema->build());
-
     }
 }
