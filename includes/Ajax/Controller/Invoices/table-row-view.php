@@ -33,7 +33,11 @@ $currency = 'HK$';
             <td><?php echo $currency , $invoice_fees; ?></td>
             <td><?php echo $currency , $invoice_transfer; ?></td>
             <td><?php echo $invoice_orders; ?></td>
-            <td><a class="download-img" href="<?php echo $invoice_file;?>" download><img alt="download" src="<?php echo FA_URL . 'dist/img/cloud-download.svg' ?>"/></a></td>
+            <td>
+               <a class="download-img" href="<?php echo $invoice_file ?? 'https://www.africau.edu/images/default/sample.pdf';?>" target="_blank" download>
+               <img alt="download-img" src="<?php echo FA_URL . 'dist/img/cloud-download.svg' ?>"/>
+               </a>
+            </td>
             <td data-filter="<?php echo $invoice_start_date; ?>"></td>
          </tr> 
      <?php } ?>
