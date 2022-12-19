@@ -79,6 +79,7 @@ body #main input:focus {
   font-weight: 600;
   text-decoration: none;
   font-size: 14px;
+  text-transform: capitalize;
 }
 
 p, a, h1, h2, h3, h4, div, span, strong, td, th, tr, button, ul, li {
