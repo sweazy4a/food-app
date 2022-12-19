@@ -5,7 +5,7 @@
                 <img src="<?php echo FA_URL . 'dist/img/burger-menu.svg' ?>" alt="food-logo"/>
             </a>
         </div>
-        <?php wp_nav_menu( ['theme_location' => 'food-app-addon']); ?>
+        <?php wp_nav_menu( ['theme_location' => 'food-app-menu']); ?>
 </div>
 
 <div class="menu-content-right">
@@ -37,7 +37,7 @@
     <?php } else{ ?>
      <a class="login-user" href="<?php echo admin_url();?>"><?php echo __('Login', 'food-app');?></a>
     <?php } ?>
-    <?php wp_nav_menu( ['theme_location' => 'food-app-addon']); ?>
+    <?php wp_nav_menu( ['theme_location' => 'food-app-menu']); ?>
     </ul>
   </div>
 </nav>

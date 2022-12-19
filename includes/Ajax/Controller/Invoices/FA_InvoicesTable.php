@@ -25,7 +25,7 @@ public function loadInvoices() {
         $page = sanitize_text_field($_POST['page']);
         $cur_page = $page;
         $page -= 1;
-        $per_page = 5;
+        $per_page = 7;
         $previous_btn = true;
         $next_btn = true;
         $first_btn = true;
